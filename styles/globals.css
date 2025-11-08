@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Encora Brand System */
+@layer base {
+    :root {
+        /* Light mode - Primary Encora colors */
+        --background: 0 0% 100%;
+        --foreground: 0 0% 12%;
+        /* #1F1F1F */
+        --card: 140 5% 97%;
+        /* #F8F9F8 */
+        --card-foreground: 0 0% 12%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 12%;
+
+        /* Encora Green - Primary brand color */
+        --primary: 181 48% 20%;
+        /* #194C4D */
+        --primary-foreground: 0 0% 100%;
+
+        /* Mint Green - Secondary accent */
+        --secondary: 157 45% 60%;
+        /* #6CC7A1 */
+        --secondary-foreground: 181 48% 20%;
+
+        --muted: 140 5% 97%;
+        /* #F8F9F8 */
+        --muted-foreground: 0 0% 45%;
+        --accent: 157 45% 60%;
+        /* Mint Green */
+        --accent-foreground: 181 48% 20%;
+
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 100%;
+
+        --border: 140 5% 88%;
+        /* #E0E0E0 */
+        --input: 140 5% 88%;
+        --ring: 181 48% 20%;
+        /* Encora Green */
+
+        --radius: 0.75rem;
+        /* 12px default border radius */
+    }
+
+    .dark {
+        /* Dark mode - Used primarily for footer and hero overlays */
+        --background: 181 48% 20%;
+        /* #194C4D */
+        --foreground: 0 0% 100%;
+        --card: 181 48% 20%;
+        --card-foreground: 0 0% 100%;
+        --popover: 181 48% 20%;
+        --popover-foreground: 0 0% 100%;
+
+        --primary: 0 0% 100%;
+        --primary-foreground: 181 48% 20%;
+
+        --secondary: 157 45% 60%;
+        /* Mint Green */
+        --secondary-foreground: 181 48% 20%;
+
+        --muted: 181 48% 25%;
+        --muted-foreground: 157 45% 60%;
+        --accent: 157 45% 60%;
+        --accent-foreground: 181 48% 20%;
+
+        --border: 157 45% 60%;
+        /* Mint Green borders in dark mode */
+        --input: 181 48% 25%;
+        --ring: 157 45% 60%;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground font-sans;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer components {
+
+    /* Button Styles - Encora System */
+    .btn-primary {
+        @apply bg-[#194C4D] text-white px-8 py-3 rounded-lg text-base font-semibold hover:bg-[#0F3536] transition-all duration-300 shadow-sm hover:shadow-md;
+    }
+
+    .btn-secondary {
+        @apply border-2 border-[#6CC7A1] text-[#194C4D] px-8 py-3 rounded-lg text-base font-semibold hover:bg-[#F8F9F8] transition-all duration-300;
+    }
+
+    /* Card Styles - Modular System */
+    .card-module {
+        @apply bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-[#E0E0E0];
+    }
+
+    .card-module-dark {
+        @apply bg-[#194C4D] rounded-lg p-8 shadow-md text-white border border-[#6CC7A1];
+    }
+
+    /* Section Spacing - Generous white space */
+    .section-spacing {
+        @apply py-20 px-4 sm:px-8 md:px-16 lg:px-24;
+    }
+
+    /* Text Styles - Roboto System */
+    .heading-xl {
+        @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#194C4D] tracking-tight;
+    }
+
+    .heading-lg {
+        @apply text-3xl sm:text-4xl md:text-5xl font-bold text-[#194C4D];
+    }
+
+    .heading-md {
+        @apply text-2xl sm:text-3xl md:text-4xl font-bold text-[#194C4D];
+    }
+
+    .body-text {
+        @apply text-base sm:text-lg text-[#1F1F1F] font-light leading-relaxed;
+    }
+
+    .body-text-lg {
+        @apply text-lg sm:text-xl text-[#1F1F1F] font-light leading-relaxed;
+    }
+
+    .text-accent {
+        @apply text-[#6CC7A1] font-medium;
+    }
+
+    /* Developer/Technical Text - Roboto Condensed style */
+    .text-tech {
+        @apply font-mono text-sm text-[#1F1F1F] tracking-tight;
+    }
+
+    /* Layout utilities */
+    .container-encora {
+        @apply max-w-6xl mx-auto;
+    }
+
+    /* Icon containers */
+    .icon-container {
+        @apply text-4xl mb-4 flex items-center justify-center w-16 h-16 rounded-lg bg-[#F8F9F8];
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scrollbar-gutter: stable;
+    }
+
+    .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .animate-on-scroll.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@layer utilities {
+
+    /* Custom utilities for Encora design system */
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .transition-smooth {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
