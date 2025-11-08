@@ -73,6 +73,33 @@
     }
 }
 
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-10px) rotate(180deg); 
+    }
+}
+
+@keyframes pulse-slow {
+    0%, 100% { 
+        opacity: 0.2; 
+    }
+    50% { 
+        opacity: 0.4; 
+    }
+}
+
+@keyframes pulse-slower {
+    0%, 100% { 
+        opacity: 0.1; 
+    }
+    50% { 
+        opacity: 0.3; 
+    }
+}
+
 @keyframes gradientFlow {
     0% {
         background-position: 0% 50%;
@@ -174,6 +201,18 @@
 
 .animate-bounce-fast {
     animation: bounceFast 2s ease-in-out infinite;
+}
+
+.animate-float {
+    animation: float linear infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-pulse-slower {
+    animation: pulse-slower 6s ease-in-out infinite;
 }
 
 .animate-gradient-flow {
