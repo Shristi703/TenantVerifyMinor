@@ -1,8 +1,9 @@
 import { Link, useLocation } from "react-router-dom"
 import { useEffect, useState } from "react"
 import ThemeSwitch from "./ThemeSwitch"
-import { Menu, X, Phone, Mail, ArrowRight } from "lucide-react"
+import { Menu, X, ArrowRight } from "lucide-react"
 import Logo from "./Logo"
+import { ROUTES } from "../src/utils/constants"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -66,16 +67,14 @@ export default function Header() {
   //   )
   // }
 
+  // Build menu items - all pages accessible without authentication
   const menuItems = [
-    { href: "/", label: "Home" },
-    { href: "/listings", label: "Listings" },
-    { href: "/login", label: "Login" },
-    { href: "/signup", label: "Sign Up" },
-    { href: "/help", label: "Help & FAQ" },
+    { href: ROUTES.LOGIN, label: "Sign In/Sign Up" },
+    { href: ROUTES.HOME, label: "Home" },
+    { href: ROUTES.DASHBOARD, label: "Dashboard" },
+    { href: ROUTES.PROFILE, label: "My Profile" },
     { href: "/settings", label: "Settings" },
-    { href: "/terms", label: "Terms" },
-    { href: "/privacy", label: "Privacy" },
-    { href: "/contact-us", label: "Contact" }
+    { href: "/help", label: "Help Center" },
   ]
 
   // Function to check if a menu item is active
@@ -163,13 +162,6 @@ export default function Header() {
                       <p className="text-encora-text dark:text-white font-semibold">Navigation</p>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Link
-                        to="/signup"
-                        onClick={() => setIsOpen(false)}
-                        className="text-xs sm:text-sm font-semibold text-white dark:text-encora-green bg-encora-green dark:bg-encora-mint px-3 py-1.5 rounded-lg hover:bg-encora-green-dark dark:hover:bg-encora-mint-light transition-all duration-300 shadow-sm hover:shadow-md"
-                      >
-                        Sign In/Sign Up
-                      </Link>
                       <button
                         onClick={() => setIsOpen(false)}
                         className="p-2 cursor-pointer text-encora-green dark:text-white hover:bg-encora-green/10 dark:hover:bg-encora-mint/10 rounded-full transition-colors"
@@ -207,44 +199,6 @@ export default function Header() {
                       )
                     })}
                   </ul>
-
-                  {/* CTA Buttons - Compact */}
-                  <div className="flex gap-2 mb-4">
-                    <Link
-                      to="/get-started"
-                      className="flex-1 text-center text-encora-text dark:text-white text-sm font-semibold rounded-xl border border-encora-text/20 dark:border-white/20 py-2 px-3 hover:bg-encora-gray dark:hover:bg-encora-mint/10 transition-all duration-300 group"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      Get Started
-                    </Link>
-                    <Link
-                      to="/contact-us"
-                      className="flex-1 text-center text-white dark:text-encora-green text-sm font-semibold rounded-xl bg-encora-green dark:bg-encora-mint py-2 px-3 hover:shadow-lg transition-all duration-300"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      Contact Us
-                    </Link>
-                  </div>
-
-                  {/* Contact Info - Compact */}
-                  <div className="text-center border-t border-encora-mint/20 dark:border-white/20 pt-3">
-                    <div className="flex flex-col gap-1 text-xs">
-                      <a
-                        className="flex items-center justify-center gap-1 text-encora-text/70 dark:text-white/70 hover:text-encora-text dark:hover:text-white transition-all duration-300"
-                        href="tel:+1-212-456-7890"
-                      >
-                        <Phone size={12} />
-                        +1-212-456-7890
-                      </a>
-                      <a
-                        className="flex items-center justify-center gap-1 text-encora-text/70 dark:text-white/70 hover:text-encora-text dark:hover:text-white transition-all duration-300"
-                        href="mailto:info@encora.com"
-                      >
-                        <Mail size={12} />
-                        info@encora.com
-                      </a>
-                    </div>
-                  </div>
                 </div>
               )}
             </div>
@@ -271,13 +225,6 @@ export default function Header() {
                 <p className="text-encora-text dark:text-white font-semibold text-lg">Navigation</p>
               </div>
               <div className="flex items-center gap-2">
-                <Link
-                  to="/signup"
-                  onClick={() => setIsOpen(false)}
-                  className="text-sm font-semibold text-white dark:text-encora-green bg-encora-green dark:bg-encora-mint px-4 py-2 rounded-lg hover:bg-encora-green-dark dark:hover:bg-encora-mint-light transition-all duration-300 shadow-sm hover:shadow-md"
-                >
-                  Sign In/Sign Up
-                </Link>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 cursor-pointer text-encora-green dark:text-white hover:bg-encora-green/10 dark:hover:bg-encora-mint/10 rounded-full transition-colors"
@@ -318,46 +265,6 @@ export default function Header() {
                     )
                   })}
                 </ul>
-
-                {/* CTA Buttons */}
-                <div className="flex flex-col gap-3 mb-6">
-                  <Link
-                    to="/get-started"
-                    className="flex justify-center items-center gap-2 w-full text-encora-text dark:text-white text-base font-semibold rounded-2xl border border-encora-text/20 dark:border-white/20 py-3 px-5 hover:bg-encora-gray dark:hover:bg-encora-mint/10 hover:border-encora-green dark:hover:border-encora-mint transition-all duration-300 hover:shadow-lg group"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Get Started
-                    <ArrowRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <Link
-                    to="/contact-us"
-                    className="flex justify-center items-center gap-2 w-full text-white dark:text-encora-green text-base font-semibold rounded-2xl bg-gradient-to-r from-encora-green to-encora-green-dark dark:from-encora-mint dark:to-encora-mint-light py-3 px-5 hover:shadow-xl transition-all duration-300 hover:scale-105 group"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Contact Us
-                    <Mail size={16} className="transform group-hover:scale-110 transition-transform" />
-                  </Link>
-                </div>
-
-                {/* Contact Info */}
-                <div className="text-center border-t border-encora-mint/20 dark:border-white/20 pt-5">
-                  <div className="flex flex-col gap-2">
-                    <a
-                      className="flex items-center justify-center gap-2 text-encora-text/70 dark:text-white/70 hover:text-encora-text dark:hover:text-white transition-all duration-300 group"
-                      href="tel:+1-212-456-7890"
-                    >
-                      <Phone size={16} className="transform group-hover:scale-110" />
-                      +1-212-456-7890
-                    </a>
-                    <a
-                      className="flex items-center justify-center gap-2 text-encora-text/70 dark:text-white/70 hover:text-encora-text dark:hover:text-white transition-all duration-300 group"
-                      href="mailto:info@encora.com"
-                    >
-                      <Mail size={16} className="transform group-hover:scale-110" />
-                      info@encora.com
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

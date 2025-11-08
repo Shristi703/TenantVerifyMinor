@@ -26,7 +26,7 @@ const AISection = () => {
                 <div className="text-center mb-16">
                     <h2 className="heading-lg mb-4 dark:text-white">AI Where It Matters</h2>
                     <p className="body-text-lg max-w-2xl mx-auto dark:text-white/80">
-                        Advanced intelligence meets operational simplicity. Encora's AI works behind the scenes to optimize every return decision.
+                        Advanced intelligence meets operational simplicity. Tenant Verify's AI works behind the scenes to optimize every return decision.
                     </p>
                 </div>
 
@@ -84,7 +84,7 @@ const AISection = () => {
 //         <div className="text-center mb-16">
 //           <h2 className="heading-lg mb-4">AI Where It Matters</h2>
 //           <p className="body-text-lg max-w-2xl mx-auto">
-//             Advanced intelligence meets operational simplicity. Encora's AI works behind the scenes to optimize every return decision.
+//             Advanced intelligence meets operational simplicity. Tenant Verify's AI works behind the scenes to optimize every return decision.
 //           </p>
 //         </div>
 

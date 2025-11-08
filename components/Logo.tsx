@@ -14,7 +14,7 @@ export default function Logo() {
         return (
             <img
                 src="/logo1_light_mode.png"
-                alt="Encora Logo"
+                alt="Tenant Verify Logo"
                 width={120}
                 height={40}
                 className="h-8 w-auto"
@@ -29,7 +29,7 @@ export default function Logo() {
     return (
         <img
             src={logoPath}
-            alt="Encora Logo"
+            alt="Tenant Verify Logo"
             width={120}
             height={40}
             className="h-8 w-auto"

@@ -6,7 +6,7 @@ export default function ContactUsPage() {
           Contact Us
         </h1>
         <p className="text-encora-text dark:text-white">
-          Get in touch with our team to learn more about Encora's smart return infrastructure solutions.
+          Get in touch with our team to learn more about Tenant Verify's smart return infrastructure solutions.
         </p>
       </div>
     </div>

@@ -88,7 +88,7 @@ const Footer = () => {
                         <AiOutlineRocket className="w-6 h-6 sm:w-8 sm:h-8 text-encora-mint animate-bounce-slow" />
                       </div>
                       <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-encora-mint to-white bg-clip-text text-transparent">
-                        ENCORA
+                        TENANT VERIFY
                       </span>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ const Footer = () => {
                 Transform Your Returns
               </h3>
               <p className="text-encora-mint/80 text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
-                Join 2,000+ companies using Encora to streamline their return processes.
+                Join 2,000+ companies using Tenant Verify to streamline their return processes.
               </p>
 
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-2xl mx-auto">
@@ -189,7 +189,7 @@ const Footer = () => {
         <div className={`border-t border-white/20 pt-8 sm:pt-12 pb-6 sm:pb-8 flex flex-col lg:flex-row justify-between items-center space-y-4 sm:space-y-6 lg:space-y-0 transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="text-center lg:text-left order-2 lg:order-1">
             <p className="text-encora-mint/80 font-light text-sm sm:text-base flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
-              <span>&copy; {currentYear} Encora Technologies.</span>
+              <span>&copy; {currentYear} Tenant Verify Technologies.</span>
               <span className="text-encora-mint/60">All rights reserved.</span>
             </p>
             <p className="text-encora-mint/60 text-xs sm:text-sm mt-1">
@@ -246,7 +246,7 @@ export default Footer
 //                 <span className="font-bold text-encora-green text-lg">E</span>
 //               </div>
 //               <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-encora-mint bg-clip-text text-transparent">
-//                 Encora
+//                 Tenant Verify
 //               </h3>
 //             </div>
 //             <p className="text-encora-mint/90 font-light text-lg leading-relaxed max-w-md mb-6">
@@ -336,7 +336,7 @@ export default Footer
 //         <div className="border-t border-white/20 pt-8 pb-12 flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
 //           <div className="text-center lg:text-left">
 //             <p className="text-encora-mint/80 font-light">
-//               &copy; {currentYear} Encora Technologies. All rights reserved.
+//               &copy; {currentYear} Tenant Verify Technologies. All rights reserved.
 //             </p>
 //             <p className="text-encora-mint/60 text-sm mt-2">
 //               Building the future of return management

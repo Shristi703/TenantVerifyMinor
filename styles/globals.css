@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Encora Brand System */
+/* Tenant Verify Brand System */
 @layer base {
     :root {
-        /* Light mode - Primary Encora colors */
+        /* Light mode - Primary Tenant Verify colors */
         --background: 0 0% 100%;
         --foreground: 0 0% 12%;
         /* #1F1F1F */
@@ -15,7 +15,7 @@
         --popover: 0 0% 100%;
         --popover-foreground: 0 0% 12%;
 
-        /* Encora Green - Primary brand color */
+        /* Tenant Verify Green - Primary brand color */
         --primary: 181 48% 20%;
         /* #194C4D */
         --primary-foreground: 0 0% 100%;
@@ -39,7 +39,7 @@
         /* #E0E0E0 */
         --input: 140 5% 88%;
         --ring: 181 48% 20%;
-        /* Encora Green */
+        /* Tenant Verify Green */
 
         --radius: 0.75rem;
         /* 12px default border radius */
@@ -85,7 +85,7 @@
 
 @layer components {
 
-    /* Button Styles - Encora System */
+    /* Button Styles - Tenant Verify System */
     .btn-primary {
         @apply bg-[#194C4D] text-white px-8 py-3 rounded-lg text-base font-semibold hover:bg-[#0F3536] transition-all duration-300 shadow-sm hover:shadow-md;
     }
@@ -167,7 +167,7 @@
 
 @layer utilities {
 
-    /* Custom utilities for Encora design system */
+    /* Custom utilities for Tenant Verify design system */
     .text-balance {
         text-wrap: balance;
     }

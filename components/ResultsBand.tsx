@@ -12,7 +12,7 @@ const ResultsBand = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">Proven Results</h2>
           <p className="text-lg font-light max-w-2xl mx-auto text-encora-mint">
-            Encora customers see measurable improvements across all key metrics
+            Tenant Verify customers see measurable improvements across all key metrics
           </p>
         </div>
 

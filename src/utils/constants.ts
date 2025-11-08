@@ -74,6 +74,8 @@ export const ROUTES = {
   SIGNUP: '/signup',
   LISTINGS: '/listings',
   LISTING_DETAIL: '/listings/:id',
+  DASHBOARD: '/dashboard',
+  PROFILE: '/profile',
   TENANT: {
     DASHBOARD: '/tenant/dashboard',
     NEW_REQUEST: '/tenant/request/new',

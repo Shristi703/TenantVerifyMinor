@@ -67,7 +67,7 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        // Encora brand colors (direct access)
+        // Tenant Verify brand colors (direct access)
         'encora-green': {
           DEFAULT: '#194C4D',
           dark: '#0F3536',

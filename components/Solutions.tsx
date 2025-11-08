@@ -25,7 +25,7 @@ const Solutions = () => {
             Solutions for Every Channel
           </h2>
           <p className="body-text-lg max-w-2xl mx-auto dark:text-white/80">
-            Whether you're managing reuse, retail returns, or recovery, Encora adapts to your needs.
+            Whether you're managing reuse, retail returns, or recovery, Tenant Verify adapts to your needs.
           </p>
         </div>
 

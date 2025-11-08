@@ -12,6 +12,9 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import Listings from "./pages/Listings";
 import ListingDetail from "./pages/ListingDetail";
+// Generic Pages
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
 // Tenant Pages
 import RequestsList from "./pages/Tenant/RequestsList";
 import RequestNew from "./pages/Tenant/RequestNew";
@@ -27,9 +30,6 @@ import HelpPage from "./pages/HelpPage";
 import TermsPage from "./pages/TermsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import NotFound from "./pages/NotFound";
-// Protected Route
-// testt
-import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -50,6 +50,8 @@ function App() {
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/listings" element={<Listings />} />
               <Route path="/listing/:id" element={<ListingDetail />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/profile" element={<Profile />} />
               <Route path="/help" element={<HelpPage />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/terms" element={<TermsPage />} />
@@ -57,72 +59,16 @@ function App() {
               <Route path="/messages/:conversationId" element={<Messages />} />
 
               {/* Tenant Routes */}
-              <Route
-                path="/tenant/dashboard"
-                element={
-                  <ProtectedRoute requiredRole="tenant">
-                    <RequestsList />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/tenant/requests"
-                element={
-                  <ProtectedRoute requiredRole="tenant">
-                    <RequestsList />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/tenant/request/new"
-                element={
-                  <ProtectedRoute requiredRole="tenant">
-                    <RequestNew />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/tenant/request/new/:listingId"
-                element={
-                  <ProtectedRoute requiredRole="tenant">
-                    <RequestNew />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/tenant/profile"
-                element={
-                  <ProtectedRoute requiredRole="tenant">
-                    <TenantProfile />
-                  </ProtectedRoute>
-                }
-              />
+              <Route path="/tenant/dashboard" element={<RequestsList />} />
+              <Route path="/tenant/requests" element={<RequestsList />} />
+              <Route path="/tenant/request/new" element={<RequestNew />} />
+              <Route path="/tenant/request/new/:listingId" element={<RequestNew />} />
+              <Route path="/tenant/profile" element={<TenantProfile />} />
 
               {/* Landlord Routes */}
-              <Route
-                path="/landlord/dashboard"
-                element={
-                  <ProtectedRoute requiredRole="landlord">
-                    <LandlordDashboard />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/landlord/request/:id"
-                element={
-                  <ProtectedRoute requiredRole="landlord">
-                    <RequestDetail />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/landlord/profile"
-                element={
-                  <ProtectedRoute requiredRole="landlord">
-                    <LandlordProfile />
-                  </ProtectedRoute>
-                }
-              />
+              <Route path="/landlord/dashboard" element={<LandlordDashboard />} />
+              <Route path="/landlord/request/:id" element={<RequestDetail />} />
+              <Route path="/landlord/profile" element={<LandlordProfile />} />
               {/* 404 Catch All */}
               <Route path="*" element={<NotFound />} />
             </Routes>

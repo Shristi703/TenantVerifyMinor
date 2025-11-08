@@ -67,7 +67,7 @@ export default function Hero() {
         {/* Subheading with staggered animation */}
         <div className="animate-on-scroll">
           <p className="text-xl sm:text-2xl text-encora-text/80 dark:text-white/80 mb-4 max-w-3xl mx-auto font-light leading-relaxed">
-          Encora's patent pending enterprise smart collection system for reusable food and beverage containers are safe, healthy and the most sustainable way to enjoy takeout food.          </p>
+          Tenant Verify's patent pending enterprise smart collection system for reusable food and beverage containers are safe, healthy and the most sustainable way to enjoy takeout food.          </p>
         </div>
 
         {/* Key value props with staggered animation */}

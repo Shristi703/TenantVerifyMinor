@@ -28,7 +28,7 @@ const ProductModules = () => {
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-4 dark:text-white">Core Platform Modules</h2>
           <p className="body-text-lg max-w-2xl mx-auto dark:text-white/80">
-            Encora's modular architecture gives you the flexibility to build the returns solution that fits your
+            Tenant Verify's modular architecture gives you the flexibility to build the returns solution that fits your
             business.
           </p>
         </div>
